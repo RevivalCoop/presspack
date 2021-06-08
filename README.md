@@ -12,6 +12,7 @@
 - Easy dev environments with Docker Compose
 - Stateless, immutable plugin management via Composer
 - Helpful HTML5 Router for firing JS based on WordPress page slug.
+- Nothing else.
 
 ## Requirements
 
