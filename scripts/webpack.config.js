@@ -35,7 +35,7 @@ module.exports = {
   // We generate sourcemaps in production. This is slow but gives good results.
   // You can exclude the *.map files from the build during deployment.
   target: 'web',
-  devtool: DEV ? 'cheap-eval-source-map' : 'source-map',
+  devtool: DEV ? 'eval-cheap-source-map' : 'source-map',
   entry: [paths.appIndexJs],
   output: {
     path: paths.appBuild,
