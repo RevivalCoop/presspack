@@ -105,7 +105,7 @@ module.exports = {
   plugins: [
     !DEV && new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: DEV ? 'bundle.css' : 'bundle.[fullhash:8].css'
+      filename: DEV ? 'bundle.css' : 'bundle.[contenthash:8].css'
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
