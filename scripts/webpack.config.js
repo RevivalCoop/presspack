@@ -5,7 +5,7 @@ const autoprefixer = require('autoprefixer');
 const AssetsPlugin = require('assets-webpack-plugin');
 const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-const CleanWebpackPlugin = require('clean-webpack-plugin');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
@@ -109,7 +109,7 @@ module.exports = {
     ]
   },
   plugins: [
-    !DEV && new CleanWebpackPlugin(['build']),
+    !DEV && new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
       filename: DEV ? 'bundle.css' : 'bundle.[hash:8].css'
     }),
