@@ -39,7 +39,7 @@ module.exports = {
   entry: [paths.appIndexJs],
   output: {
     path: paths.appBuild,
-    filename: DEV ? 'bundle.js' : 'bundle.[hash:8].js'
+    filename: DEV ? 'bundle.js' : 'bundle.[fullhash:8].js'
   },
   module: {
     rules: [
@@ -104,7 +104,7 @@ module.exports = {
   plugins: [
     !DEV && new CleanWebpackPlugin(),
     new MiniCssExtractPlugin({
-      filename: DEV ? 'bundle.css' : 'bundle.[hash:8].css'
+      filename: DEV ? 'bundle.css' : 'bundle.[fullhash:8].css'
     }),
     new webpack.EnvironmentPlugin({
       NODE_ENV: 'development', // use 'development' unless process.env.NODE_ENV is defined
