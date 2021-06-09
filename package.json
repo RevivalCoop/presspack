@@ -31,5 +31,10 @@
     "sass-loader": "^12.0.0",
     "style-loader": "^2.0.0",
     "webpack": "^5.38.1"
-  }
+  },
+  "browserslist": [ ">1%",
+    "last 4 versions",
+    "Firefox ESR",
+    "not ie < 9"
+  ]
 }
