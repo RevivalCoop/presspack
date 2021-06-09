@@ -39,7 +39,8 @@ module.exports = {
   entry: [paths.appIndexJs],
   output: {
     path: paths.appBuild,
-    filename: DEV ? 'bundle.js' : 'bundle.[fullhash:8].js'
+    publicPath: '',
+    filename: DEV ? 'bundle.js' : 'bundle.[contenthash:8].js'
   },
   module: {
     rules: [
