@@ -8,7 +8,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const TerserPlugin = require('terser-webpack-plugin');
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin');
-const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
+const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
 const path = require('path');
 const fs = require('fs');
 
@@ -88,8 +88,8 @@ module.exports = {
   optimization: {
     minimize: !DEV,
     minimizer: [
-      new OptimizeCSSAssetsPlugin({
-        cssProcessorOptions: {
+      new CssMinimizerPlugin({
+        minimizerOptions: {
           map: {
             inline: false,
             annotation: true,
